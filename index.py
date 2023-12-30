@@ -8,12 +8,12 @@ def main():
     print("I tre attaccanti più forti sono: ")
     print("Nome \t\t Squadra \t\t Efficacia")
     for giocatore in attaccantiPiuForti:
-        print(f"{giocatore['nomeGiocatore']:35} {giocatore['team']:35} {giocatore['efficacia']:35}")
+        print(f"{giocatore['nomeGiocatore']:25} {giocatore['team']:25} {giocatore['efficacia']:25}")
     print()
     print("I tre centrocampisti più forti sono: ")
     print("Nome \t\t Squadra \t\t Efficacia")
     for giocatore in centroCampistiPiuForti:
-        print(f"{giocatore['nomeGiocatore']:35} {giocatore['team']:35} {giocatore['efficacia']:35}")
+        print(f"{giocatore['nomeGiocatore']:25} {giocatore['team']:25} {giocatore['efficacia']:25}")
 
 
 """
@@ -53,7 +53,7 @@ def leggi_file(filename):
                     elif posizione == "MF":
                         palleIntercettate = int(line[8])
                         palleRecuperate = int(line[12])
-                        crossFatti = int(line[8])
+                        crossFatti = int(line[7])
                         assist = int(line[6])
                         if crossFatti != 0 and minutiGiocati != 0:
                             efficaciaCentrocampista = (palleIntercettate + palleRecuperate + (assist / crossFatti))/minutiGiocati
